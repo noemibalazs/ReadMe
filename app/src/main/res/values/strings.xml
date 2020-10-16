@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Read Me</string>
+    <string name="txt_repo_details_title">Repository details</string>
+    <string name="txt_search_for_repository_hint">Search repos by name</string>
+    <string name="txt_repo_name"><b>Repo\'s name:</b> %s</string>
+    <string name="txt_repo_description"><b>Repo\'s description:</b> %s</string>
+    <string name="txt_error">Something went wrong, try it again!</string>
+    <string name="txt_empty_search">The searched name should be at least 4 characters!</string>
+    <string name="txt_readme">Read Me</string>
+</resources>

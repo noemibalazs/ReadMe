@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.noemi.android.readme.details.RepositoryDetailsViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_light"
+        android:fillViewport="true"
+        tools:context=".details.RepositoryDetailsActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/medium_margin">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:elevation="6dp"
+                app:cardCornerRadius="@dimen/medium_margin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/large_margin">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repo_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Repo's name: Jetbrains Kotlin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repo_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
+                        tools:text="Lorem ipsum dolor sit amet" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repo_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_description"
+                        tools:text="Repo's size: 1021" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repo_watchers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_size"
+                        tools:text="Repo's watchers: 21" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repo_stargazers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_watchers"
+                        tools:text="Repo's stargazers: 12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repo_forks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_stargazers"
+                        tools:text="Repo's forks: 27" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repo_open_issues_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_forks"
+                        tools:text="Repo's open issues count: 27" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_repos_readme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/large_margin"
+                        android:text="@string/txt_readme"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/large_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_open_issues_count" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_readme_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_repos_readme" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/medium_margin" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</layout>
