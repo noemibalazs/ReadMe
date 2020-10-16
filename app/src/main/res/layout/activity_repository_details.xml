@@ -119,31 +119,15 @@
                         app:layout_constraintTop_toBottomOf="@id/tv_repo_forks"
                         tools:text="Repo's open issues count: 27" />
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tv_repos_readme"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/large_margin"
-                        android:text="@string/txt_readme"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="@dimen/large_text_size"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_repo_open_issues_count" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tv_readme_details"
+                    <include
+                        android:id="@+id/cl_read_me"
+                        layout="@layout/repository_readme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        tools:text="Lorem ipsum ..."
-                        android:textSize="@dimen/medium_text_size"
-                        android:textColor="@color/colorPrimary"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_repos_readme" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_repo_open_issues_count" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

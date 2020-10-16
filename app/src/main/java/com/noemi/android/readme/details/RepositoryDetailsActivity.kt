@@ -14,6 +14,7 @@ import com.noemi.android.readme.databinding.ActivityRepositoryDetailsBinding
 import com.noemi.android.readme.util.REPOSITORY_DETAILS_SAVED_STATE
 import com.noemi.android.readme.util.REPOSITORY_README_SAVED_STATE
 import com.noemi.android.readme.util.setSpannableText
+import kotlinx.android.synthetic.main.repository_readme.view.*
 import org.koin.androidx.viewmodel.ext.android.stateViewModel
 import org.koin.core.logger.KOIN_TAG
 import java.nio.charset.StandardCharsets
@@ -76,7 +77,7 @@ class RepositoryDetailsActivity : AppCompatActivity() {
     }
 
     private fun populateUI(repositoryDetails: RepositoryDetails) {
-        Log.d("DETAILS" , " RD: $repositoryDetails")
+        Log.d("DETAILS", " RD: $repositoryDetails")
         binding.tvRepoName.setSpannableText(
             getString(
                 R.string.txt_repo_name,
@@ -128,7 +129,7 @@ class RepositoryDetailsActivity : AppCompatActivity() {
             try {
                 val decodedReadme: ByteArray = Base64.decode(it, Base64.NO_PADDING)
                 val readMeText = String(decodedReadme, StandardCharsets.UTF_8)
-                binding.tvRepoDescription.text = readMeText
+                binding.clReadMe.tv_readme_details.text = readMeText
                 Log.d("DETAILS", "TEXT: $readMeText")
 
             } catch (e: FormatException) {
