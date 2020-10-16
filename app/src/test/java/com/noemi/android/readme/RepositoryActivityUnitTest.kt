@@ -2,7 +2,6 @@ package com.noemi.android.readme
 
 import com.noemi.android.readme.repository.RepositoryActivity
 import org.junit.After
-import org.junit.Assert
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

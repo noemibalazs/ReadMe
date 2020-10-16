@@ -2,7 +2,6 @@ package com.noemi.android.readme.repository
 
 import android.util.Log
 import androidx.databinding.ObservableField
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.noemi.android.readme.data.Repositories
 import com.noemi.android.readme.data.Repository

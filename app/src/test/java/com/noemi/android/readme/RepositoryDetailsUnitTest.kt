@@ -2,7 +2,6 @@ package com.noemi.android.readme
 
 import com.noemi.android.readme.data.RepositoryDetails
 import org.junit.After
-import org.junit.Assert
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Test
@@ -15,7 +14,7 @@ import org.robolectric.annotation.Config
 @org.robolectric.annotation.Config(manifest = Config.NONE)
 class RepositoryDetailsUnitTest {
 
-    val repoDetails = RepositoryDetails(
+    private val repoDetails = RepositoryDetails(
         12, "leakcanary",
         "A memory detection library for Android.", 999, 369, 639,
         6639, 3
