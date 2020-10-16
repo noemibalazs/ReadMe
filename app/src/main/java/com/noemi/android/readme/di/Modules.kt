@@ -4,7 +4,7 @@ import androidx.lifecycle.SavedStateHandle
 import com.noemi.android.readme.details.RepositoryDetailsRemoteDataSource
 import com.noemi.android.readme.details.RepositoryDetailsRemoteDataSourceImpl
 import com.noemi.android.readme.details.RepositoryDetailsViewModel
-import com.noemi.android.readme.helper.DataManger
+import com.noemi.android.readme.helper.DataManager
 import com.noemi.android.readme.network.GitHubApiService
 import com.noemi.android.readme.repository.RepositoryRemoteDataSource
 import com.noemi.android.readme.repository.RepositoryRemoteDataSourceImpl
@@ -14,7 +14,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val dataManagerModule = module {
-    single { DataManger(androidContext().applicationContext) }
+    single { DataManager(androidContext().applicationContext) }
 }
 
 val gitHubAPIModule = module {

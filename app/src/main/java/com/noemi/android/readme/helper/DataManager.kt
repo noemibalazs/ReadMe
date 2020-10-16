@@ -5,7 +5,7 @@ import com.noemi.android.readme.util.MY_PREFERENCE
 import com.noemi.android.readme.util.REPOSITORY_FULL_NAME
 import com.noemi.android.readme.util.REPOSITORY_ID
 
-class DataManger(private val context: Context) {
+class DataManager(private val context: Context) {
 
     private val sharedPreferences =
         context.getSharedPreferences(MY_PREFERENCE, Context.MODE_PRIVATE)

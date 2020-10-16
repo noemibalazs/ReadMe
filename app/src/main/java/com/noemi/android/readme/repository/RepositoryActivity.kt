@@ -11,7 +11,7 @@ import com.noemi.android.readme.R
 import com.noemi.android.readme.data.Repository
 import com.noemi.android.readme.databinding.ActivityRepositoryBinding
 import com.noemi.android.readme.details.RepositoryDetailsActivity
-import com.noemi.android.readme.helper.DataManger
+import com.noemi.android.readme.helper.DataManager
 import com.noemi.android.readme.helper.OnClickEvent
 import com.noemi.android.readme.helper.RepositoryClickListener
 import com.noemi.android.readme.util.SAVED_INSTANCE_KEY
@@ -21,7 +21,7 @@ import org.koin.android.ext.android.inject
 class RepositoryActivity : AppCompatActivity() {
 
     private val repositoryViewModel: RepositoryViewModel by inject()
-    private val dataManager: DataManger by inject()
+    private val dataManager: DataManager by inject()
     private lateinit var binding: ActivityRepositoryBinding
     private lateinit var adapter: RepositoryAdapter
 

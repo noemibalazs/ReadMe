@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.noemi.android.readme.data.RepositoryDetails
 import com.noemi.android.readme.data.RepositoryReadMe
-import com.noemi.android.readme.helper.DataManger
+import com.noemi.android.readme.helper.DataManager
 import com.noemi.android.readme.helper.SingleLiveData
 import com.noemi.android.readme.network.GitHubApiService
 import com.orhanobut.logger.Logger
@@ -19,7 +19,7 @@ import retrofit2.Response
 
 class RepositoryDetailsRemoteDataSourceImpl(
     private val gitHubApiService: GitHubApiService,
-    private val dataManager: DataManger
+    private val dataManager: DataManager
 ) : RepositoryDetailsRemoteDataSource {
 
     val detailsError = SingleLiveData<Any>()
