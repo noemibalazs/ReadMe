@@ -8,11 +8,13 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.noemi.android.readme.R
+import com.noemi.android.readme.data.Repository
 import com.noemi.android.readme.databinding.ActivityRepositoryBinding
 import com.noemi.android.readme.details.RepositoryDetailsActivity
 import com.noemi.android.readme.helper.DataManger
 import com.noemi.android.readme.helper.OnClickEvent
 import com.noemi.android.readme.helper.RepositoryClickListener
+import com.noemi.android.readme.util.SAVED_INSTANCE_KEY
 import com.noemi.android.readme.util.openActivity
 import org.koin.android.ext.android.inject
 
@@ -37,6 +39,19 @@ class RepositoryActivity : AppCompatActivity() {
 
         initBinding()
         initObservers()
+
+        if (savedInstanceState != null) {
+            val repos = savedInstanceState.getParcelableArrayList<Repository>(SAVED_INSTANCE_KEY)
+            adapter.submitList(repos)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        val list = adapter.currentList
+        val repos = arrayListOf<Repository>()
+        repos.addAll(list)
+        outState.putParcelableArrayList(SAVED_INSTANCE_KEY, repos)
+        super.onSaveInstanceState(outState)
     }
 
     private fun initBinding() {
@@ -72,7 +87,6 @@ class RepositoryActivity : AppCompatActivity() {
         repositoryViewModel.failureError.observe(this, {
             showErrorToastToUser(getString(R.string.txt_error))
         })
-
     }
 
     private fun loadRepositories(event: OnClickEvent) {

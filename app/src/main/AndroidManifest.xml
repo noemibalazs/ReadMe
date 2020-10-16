@@ -13,8 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".repository.RepositoryActivity"
-            android:screenOrientation="portrait">
+        <activity android:name=".repository.RepositoryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,11 +22,7 @@
 
         <activity
             android:name=".details.RepositoryDetailsActivity"
-            android:label="@string/txt_repo_details_title">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".repository.RepositoryActivity" />
-        </activity>
+            android:label="@string/txt_repo_details_title" />
     </application>
 
 </manifest>
