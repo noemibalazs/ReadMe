@@ -1,6 +1,9 @@
 package com.noemi.android.readme.di
 
 import androidx.lifecycle.SavedStateHandle
+import com.noemi.android.readme.details.RepositoryDetailsRemoteDataSource
+import com.noemi.android.readme.details.RepositoryDetailsRemoteDataSourceImpl
+import com.noemi.android.readme.details.RepositoryDetailsViewModel
 import com.noemi.android.readme.helper.DataManger
 import com.noemi.android.readme.network.GitHubApiService
 import com.noemi.android.readme.repository.RepositoryRemoteDataSource
@@ -29,6 +32,22 @@ val repositoryViewModelModule = module {
     viewModel {
         RepositoryViewModel(
             remoteDataSource = get()
+        )
+    }
+}
+
+val repositoryDetailsViewModelModule = module {
+    single<RepositoryDetailsRemoteDataSource> {
+        RepositoryDetailsRemoteDataSourceImpl(
+            gitHubApiService = get(),
+            dataManager = get()
+        )
+    }
+
+    viewModel { (handle: SavedStateHandle) ->
+        RepositoryDetailsViewModel(
+            handle = handle,
+            repositoryDetailsRemoteDataSource = get()
         )
     }
 }

@@ -10,11 +10,13 @@ class KoinInjection {
             fun getDataManagerModule() = listOf(dataManagerModule)
             fun getGitHubApiModule() = listOf(gitHubAPIModule)
             fun getRepositoryVMModule() = listOf(repositoryViewModelModule)
+            fun getRepositoryDetailsVMModule() = listOf(repositoryDetailsViewModelModule)
 
             return mutableListOf<Module>().apply {
                 addAll(getDataManagerModule())
                 addAll(getGitHubApiModule())
                 addAll(getRepositoryVMModule())
+                addAll(getRepositoryDetailsVMModule())
             }
         }
     }
