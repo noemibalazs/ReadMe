@@ -8,10 +8,9 @@ Libraries:
 
 1. Koin 
 2. Retrofit 
-3. Glide 
-4. Android databinding 
-5. Support design libraries 
-6. Espresso
+3. Android databinding 
+4. Support design libraries 
+5. Espresso
 
 
 Screenshots:
