@@ -1,8 +1,6 @@
-Read Me
-
 TO DO:
 
-Design and implent an application using the GitHub API following the next steps:
+Design and implement an application using the GitHub API following the next steps:
 1. Allow the user to search for a repository by name;
 2. Display details about the selected repository and if it available should include the readme.
 
