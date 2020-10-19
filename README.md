@@ -1,4 +1,19 @@
-ReadMe
+Read Me
+
+TO DO:
+
+Design and implent an application using the GitHub API following the next steps:
+1. Allow the user to search for a repository by name;
+2. Display details about the selected repository and if it available should include the readme.
+
+Libraries:
+
+1. Koin 
+2. Retrofit 
+3. Glide 
+4. Android databinding 
+5 .Support design libraries 
+6. Espresso
 
 
 Screenshots:
